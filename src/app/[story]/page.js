@@ -1,18 +1,28 @@
 
 import {chapterParse} from '@/lib/chapter.js';
+import {storyParse} from '@/lib/story.js'
 import ChapterIndex from '@/components/chapterIndex'
 
 async function storyPage({ params }) {
     const { story } = await params
-    console.log(chapterParse, Array.isArray(chapterParse));
 
     const chapterGroup = chapterParse.filter(chapterParse => chapterParse.slug === story);
-    console.log(chapterGroup, Array.isArray(chapterGroup));
+
+    const storySyno = storyParse.find(syno => syno.slug === story);
 
     return (
         <>
-        <h1>{story.charAt(0).toUpperCase() + story.slice(1)}</h1>
-        <h2>Chapters</h2>
+        <div className='story-page-body'> 
+            <div>
+                <h1 className='story-page-title'>{story.charAt(0).toUpperCase() + story.slice(1)}</h1>
+                <div className="underline"></div>
+            </div>
+        
+        <p className='story-syno'>{storySyno.synopsis}</p>
+
+        <div className='chapter-index'>
+        <h2 className='index-heading'>Chapters</h2>
+        <div  className='chapter-link-box'>
 
         {chapterGroup.map(ch => (
             <ChapterIndex 
@@ -23,6 +33,12 @@ async function storyPage({ params }) {
             slug = {ch.slug}
             />
         ))}
+        </div>
+        {/* <div className="chapter-underline"></div> */}
+
+        </div>
+
+        </div>
         </>
     );
 }

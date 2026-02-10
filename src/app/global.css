@@ -1,8 +1,91 @@
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(240, 33%, 99%);
+    padding: 0;
+    margin: 0;
+    padding-bottom: 100px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site-header {
+    box-shadow:  0px 2px 8px #d0d0d0;
+    background-color: hsl(0, 0%, 96%);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    position:sticky;
+    top: 0px;
+    width: 100%;
+    
+}
+
+.site-title{
+    margin: 0;
+}
+
+
+
+.welcome {
+    text-align: center;
+}
+
+.home-body {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: center;
+}
+
+.card-group {
+    display: flex;
+    gap: 24px;
+}
+
+.line {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.underline {
+    width: 46px;
+    height: 4px;
+    background-color: hsl(186, 47%, 19%);
+    padding: 0;
+    border-radius: 2px;
+}
+
+.story-line {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.story-link {
+    text-decoration: none;
+    max-width: fit-content;
+}
+
 .story-card-container {
-    background-color: rgb(40, 146, 146);
-    padding: 4px;
-    max-width: 200px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 8px;
+    max-width: 250px;
     min-width: none;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 0px 8px #d0d0d0;
+}
+
+.story-card-title {
+    font-size: 24px;
+    padding: 0;
+    text-align: left;
+    margin-top: 0;
+    color: hsl(0, 0%, 12%);
 }
 
 .story-card-synop {
@@ -10,13 +93,92 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    color: hsl(0, 0%, 45%);
+    padding: 0;
+    font-size: 12px;
+    text-align: left;
+    line-height: 20px;
 }
 
 .story-button {
     border-radius: 4px;
     border: 0;
-    background-color: aquamarine;
+    background-color: hsl(186, 47%, 19%);
+    padding: 4px;
+
+    
+}
+
+.read-now-link {
     text-decoration: none;
-    padding-left: 4px;
-    padding-right: 4px;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.story-page-body {
+    max-width: 50%;
+    min-width: 400px;
+
+}
+
+.story-syno {
+    line-height: 24px;
+}
+
+.story-page-title {
+    margin-bottom: 4px;
+}
+
+.chapter-index {
+    padding: 8px;
+    box-shadow: 0px 0px 8px #d0d0d0;
+    border-radius: 8px;
+}
+
+.index-heading {
+    margin-bottom: 12px;
+    margin-top: 0;
+    padding: 0;
+}
+
+
+.chapter-underline {
+    width: 24px;
+    height: 1px;
+    background-color: hsl(186, 47%, 19%);
+    padding: 0;
+    border-radius: 2px;
+    margin-top: 2px;
+}
+
+
+.chapter-link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.chapter-link-box {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+
+.reader-body {
+    max-width: 50%;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+}
+
+.reader-story-link {
+    text-decoration: none;
+    color: hsl(186, 47%, 19%);
+}
+
+.chapter-reader-title {
+    margin-bottom: 4px;
 }
