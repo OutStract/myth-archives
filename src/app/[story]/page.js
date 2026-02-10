@@ -23,16 +23,15 @@ async function storyPage({ params }) {
         <div className='chapter-index'>
         <h2 className='index-heading'>Chapters</h2>
         <div  className='chapter-link-box'>
-
-        {chapterGroup.map(ch => (
-            <ChapterIndex 
-            key = {ch.id}
-            chapter = {ch.chapter}
-            title = {ch.title}
-            chapterId = {ch.id}
-            slug = {ch.slug}
-            />
-        ))}
+            {chapterGroup.map(ch => (
+                <ChapterIndex 
+                key = {ch.id}
+                chapter = {ch.chapter}
+                title = {ch.title}
+                chapterId = {ch.id}
+                slug = {ch.slug}
+                />
+            ))}
         </div>
         {/* <div className="chapter-underline"></div> */}
 

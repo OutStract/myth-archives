@@ -4,6 +4,8 @@ import Underline from '@/components/Underline'
 
 
 function home() {
+
+    console.log(mainData);
     
     return(
         <>
@@ -16,14 +18,14 @@ function home() {
 
             <div className='card-group'>
 
-            {mainData.map (story => (
-                <StoryCard 
-                key={story.id}
-                story = {story.story}
-                synopsis = {story.synopsis}
-                storyLink= {story.slug}
-                />
-            ))}
+                {mainData.map (story => (
+                    <StoryCard 
+                    key={story.id}
+                    story = {story.story}
+                    synopsis = {story.synopsis}
+                    storyLink= {story.slug}
+                    />
+                ))}
 
             </div>
 
@@ -33,14 +35,14 @@ function home() {
         </div>
 
         <div className='card-group'>
-        {sideData.map (story => (
-            <StoryCard 
-            key={story.id}
-            story = {story.story}
-            synopsis = {story.synopsis}
-            storyLink= {story.slug}
-            />
-        ))}
+            {sideData.map (story => (
+                <StoryCard 
+                key={story.id}
+                story = {story.story}
+                synopsis = {story.synopsis}
+                storyLink= {story.slug}
+                />
+            ))}
         </div>
 
 
