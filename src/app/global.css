@@ -1,3 +1,34 @@
+@media screen and (max-width: 768px) {
+
+.body .home-body {
+    max-width: 80%
+}
+.home-body .card-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+}
+.story-link .story-card-container {
+    min-width:fit-content;
+}
+.body .story-page-body {
+    max-width: 90%;
+}
+.body .reader-body {
+    max-width: 90%;
+    font-size: 20px;
+}
+.chapter-reader-title{
+    font-size: 32px;
+}
+.story-syno {
+    font-size: 20px;
+}
+.chapter-link{
+    font-size: 20px;
+}
+} 
+
 .body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: hsl(240, 33%, 99%);
@@ -20,6 +51,7 @@
     position:sticky;
     top: 0px;
     width: 100%;
+    padding-top: 12px;
     
 }
 
@@ -43,7 +75,7 @@
 
 .card-group {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     gap: 24px;
 }
 
@@ -68,14 +100,13 @@
 
 .story-link {
     text-decoration: none;
-    max-width: fit-content;
+    min-width: fit-content;
 }
 
 .story-card-container {
     background-color: hsl(0, 0%, 100%);
     padding: 8px;
     max-width: 250px;
-    min-width: 200px;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0px 0px 8px #d0d0d0;
