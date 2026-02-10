@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "story": "Rewind",
+    "slug" : "rewind",
+    "line": "main",
+    "synopsis": "After Losing his parent in an accident at the age of 5 and his grandfather who died of old age, Ashwin was living with his bedridden grandmother, he was living a hard life until one day after school Ashwin went to the convenience store to buy something his grandmother asked and on his way back while crossing the road he got hit by a truck and died at the age of 15, or he should have died but when he opens his eyes he saw his parents smiling faces"
+  },
+
+  {
+    "id": "2",
+    "story": "Story Seeker",
+    "slug" : "story-seeker",
+    "line": "side",
+    "synopsis": "Arun a ordinary high school kid who loves reading, he read all types of stories from children's tales to mythological epics, but non of them really made him feel anything, other people said that they found themselves immersed in a story, but for Arun he was just reading some words written on a page, never being immersed in a story, he kept reading just to find that one story that would pull Arun in it's world. One day, he woke up and found himself lying in a grasslands. He thought it was a dream because he had gone to sleep in his room, but his experience after reading so many stories, he realised that he had been transported to another world, and thought, “In this world, I will write my own story” After reading all the stories the world has to offer, Arun developed an ability to judge other people and think calmly in any situation, because he thinks even the world has a story, and all the stories he read are inspired by the world. Art imitates life after all."
+  },
+
+  {
+    "id": "3",
+    "story": "Star Weaver",
+    "slug" : "star-weaver",
+    "line": "side",
+    "synopsis": "A taxi drive got tangled up in supernatural battle royal to become the next king of the night sky"
+  }
+
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "1",
+    "story": "Rewind",
+    "chapter": "1",
+    "title": "First play",
+    "pov": "ashwin",
+    "type": "main",
+    "line": "line",
+    "slug": "rewind",
+    "file": "000001.md"
+  },
+  {
+    "id": "2",
+    "story": "Story-Seeker",
+    "chapter": "1",
+    "title": "Unknown Grasslands",
+    "pov": "arun",
+    "type": "main",
+    "line": "side",
+    "slug": "story-seeker",
+    "file": "000002.md"
+  },
+  {
+    "id": "3",
+    "story": "Rewind",
+    "chapter": "2",
+    "title": "Growing up",
+    "pov": "ashwin",
+    "type": "side",
+    "line": "main",
+    "slug": "rewind",
+    "file": "000003.md"
+  },
+  {
+    "id": "4",
+    "story": "Story-Seeker",
+    "chapter": "2",
+    "title": "Narrator",
+    "pov": "arun",
+    "type": "main",
+    "line": "side",
+    "slug": "story-seeker",
+    "file": "000004.md"
+  }
+]
