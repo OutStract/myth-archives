@@ -43,6 +43,7 @@
 
 .card-group {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
 }
 
@@ -119,8 +120,6 @@
 
 .story-page-body {
     max-width: 50%;
-    min-width: 400px;
-
 }
 
 .story-syno {
@@ -167,7 +166,6 @@
 
 .reader-body {
     max-width: 50%;
-    min-width: 400px;
     display: flex;
     flex-direction: column;
     align-content: center;
