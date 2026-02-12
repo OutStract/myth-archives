@@ -21,6 +21,14 @@
     "slug" : "star-weaver",
     "line": "side",
     "synopsis": "A taxi drive got tangled up in supernatural battle royal to become the next king of the night sky"
+  },
+
+  {
+    "id": "4",
+    "story": "Anthology",
+    "slug" : "anthology",
+    "line": "side",
+    "synopsis": "My need to tell, lack of time, and commitment issues"
   }
 
 ]
