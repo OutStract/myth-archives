@@ -4,7 +4,6 @@ import StoryCard from '@/components/storyCard'
 
 function home() {
 
-    console.log(mainData);
     
     return(
         <>
