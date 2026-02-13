@@ -47,11 +47,22 @@
     "id": "5",
     "story": "Rewind",
     "chapter": "3",
-    "title": "Test",
+    "title": "Waterpark",
     "pov": "ashwin",
-    "type": "main",
+    "type": "side",
     "line": "main",
     "slug": "rewind",
     "file": "000005.md"
+  },
+  {
+    "id": "6",
+    "story": "Rewind",
+    "chapter": "4",
+    "title": "Friend",
+    "pov": "ashwin",
+    "type": "side",
+    "line": "main",
+    "slug": "rewind",
+    "file": "000006.md"
   }
 ]
