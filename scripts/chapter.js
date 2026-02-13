@@ -32,7 +32,8 @@ title: "",
 pov: "", 
 type: "",
 line: "",
-slug: "" 
+slug: "",
+year: "" 
 }}
 
 //Write from here 

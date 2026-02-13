@@ -1,45 +1,49 @@
- import { chapterParse } from "@/lib/chapter";
-// import { Html } from "next/document";
- const fs = require("fs");
+ import { chapterParse, chapterSort, index, next, prev } from "@/lib/chapter";
+ import fs from "fs";
  import { remark } from "remark";
  import remarkHtml from "remark-html";
  import Link from "next/link";
  import { nextPage, backPage } from "@/lib/pagination";
+ import {upperCase} from "@/lib/utilities"
  
  
  async function ChapterPage({ params }) {
     const { chapterId, story } = await params
 
-    console.log(typeof chapterId,typeof backPage, backPage === Number(chapterId) ? true : false)
 
     //Match the object with the url id
     const chapterFile = chapterParse.find(chapterParse => chapterParse.id === chapterId);
-
-
-    //take the file name and find that file in the 
+    //Read the file
     const chapterRead = fs.readFileSync(`chapters/${chapterFile.file}`, "utf-8");
-    const chapterClean = chapterRead.replace(/\{\{[\s\S]*?\}\}|^\s*\/\/.*$/gm, "")
+    //Remove metadata and comments
+    const chapterClean = chapterRead.replace(/\{\{[\s\S]*?\}\}|^\s*\/\/.*$/gm, "");
+    //Convert it into html
     const processed = await remark()
     .use(remarkHtml)
     .process(chapterClean);  
-
     const contentHtml = processed.toString();
+
+    const sort = chapterSort(story);
+    const chIndex = index(sort,chapterId);
+    const nextPg = next(chIndex,sort);
+    const prevPg = prev(chIndex,sort);
 
 
     return (
         <>
         <div className="reader-body">
-            <h1 className="chapter-reader-title"><Link href={`/${story}`} className="reader-story-link" >{story.charAt(0).toUpperCase() + story.slice(1)}</Link>: Chapter {chapterFile.chapter} - {chapterFile.title}</h1>
+            <h1 className="chapter-reader-title"><Link href={`/${story}`} className="reader-story-link" >{upperCase(story)}</Link>: Chapter {chapterFile.chapter} - {chapterFile.title}</h1>
             <div className="underline"></div>
             <div className="pagination">
-                <div className={backPage(story,chapterId) === chapterId ? "hide" : "back-page"}> <Link className={backPage(story,chapterId) === chapterId ? "hide" : "nav-but"} href={`/${story}/chapter/${backPage(story,chapterId)}`}>Previous</Link></div>
-                <div className={nextPage(story,chapterId) === chapterId ? "hide" : "next-page"}><Link className="nav-but" href={`/${story}/chapter/${nextPage(story,chapterId)}`}>Next</Link></div>
+                {nextPg && (<div className="next-page"><Link className="nav-link" href={`/${story}/chapter/${nextPg}`}>Next</Link></div>)}
+                {prevPg && (<div className="back-page"><Link className="nav-link" href={`/${story}/chapter/${prevPg}`}>Previous</Link></div>)}
             </div>
             <div className="chapter-content" dangerouslySetInnerHTML={{__html:contentHtml}}/>
             <div className="pagination">
-                <div className={backPage(story,chapterId) === chapterId ? "hide" : "back-page"}> <Link className={backPage(story,chapterId) === chapterId ? "hide" : "nav-but"} href={`/${story}/chapter/${backPage(story,chapterId)}`}>Previous</Link></div>
-                <div className={nextPage(story,chapterId) === chapterId ? "hide" : "next-page"}><Link className="nav-but" href={`/${story}/chapter/${nextPage(story,chapterId)}`}>Next</Link></div>
+                {nextPg && (<div className="next-page"><Link className="nav-link" href={`/${story}/chapter/${nextPg}`}>Next</Link></div>)}
+                {prevPg && (<div className="back-page"><Link className="nav-link" href={`/${story}/chapter/${prevPg}`}>Previous</Link></div>)}
             </div>
+            
         </div>
         </>
         

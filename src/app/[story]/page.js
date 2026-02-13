@@ -3,6 +3,7 @@ import {chapterParse} from '@/lib/chapter.js';
 import {storyParse} from '@/lib/story.js'
 import ChapterIndex from '@/components/chapterIndex'
 
+
 async function storyPage({ params }) {
     const { story } = await params
 
@@ -10,11 +11,12 @@ async function storyPage({ params }) {
 
     const storySyno = storyParse.find(syno => syno.slug === story);
 
+
     return (
         <>
         <div className='story-page-body'> 
             <div>
-                <h1 className='story-page-title'>{story.charAt(0).toUpperCase() + story.slice(1)}</h1>
+                <h1 className='story-page-title'>{story.charAt(0).toUpperCase() + story.slice(1)} </h1>
                 <div className="underline"></div>
             </div>
         
@@ -33,7 +35,7 @@ async function storyPage({ params }) {
                 />
             ))}
         </div>
-        {/* <div className="chapter-underline"></div> */}
+        
 
         </div>
 

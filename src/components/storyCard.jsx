@@ -7,7 +7,7 @@ function StoryCard ({story, synopsis, storyLink}) {
                 <h2 className="story-card-title">{story}</h2>
                 <p className="story-card-synop">{synopsis}</p>
                 <div className="story-button" >
-                    <Link href={`/${storyLink}`} className="read-now-link">Start Reading</Link>
+                    <div className="read-now-link">Start Reading</div>
                 </div>
             </div>
         </Link>
