@@ -35,13 +35,13 @@
             <h1 className="chapter-reader-title"><Link href={`/${story}`} className="reader-story-link" >{upperCase(story)}</Link>: Chapter {chapterFile.chapter} - {chapterFile.title}</h1>
             <div className="underline"></div>
             <div className="pagination">
-                {nextPg && (<div className="next-page"><Link className="nav-link" href={`/${story}/chapter/${nextPg}`}>Next</Link></div>)}
                 {prevPg && (<div className="back-page"><Link className="nav-link" href={`/${story}/chapter/${prevPg}`}>Previous</Link></div>)}
+                {nextPg && (<div className="next-page"><Link className="nav-link" href={`/${story}/chapter/${nextPg}`}>Next</Link></div>)}
             </div>
             <div className="chapter-content" dangerouslySetInnerHTML={{__html:contentHtml}}/>
             <div className="pagination">
-                {nextPg && (<div className="next-page"><Link className="nav-link" href={`/${story}/chapter/${nextPg}`}>Next</Link></div>)}
                 {prevPg && (<div className="back-page"><Link className="nav-link" href={`/${story}/chapter/${prevPg}`}>Previous</Link></div>)}
+                {nextPg && (<div className="next-page"><Link className="nav-link" href={`/${story}/chapter/${nextPg}`}>Next</Link></div>)}
             </div>
             
         </div>
